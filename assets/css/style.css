@@ -437,46 +437,76 @@ img {
   padding: 1.875rem 1.25rem;
   color: white;
   background-color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+@media (min-width: 768px) {
+  .footer {
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    gap: 25px;
+  }
 }
 .footer h2 {
   margin-bottom: 1.25rem;
   font-family: "Shrikhand", cursive;
   font-weight: 400;
 }
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 768px) {
   .footer h2 {
     text-align: center;
+    margin: 0;
   }
 }
 .footer__nav {
   margin: 0.625rem 0;
 }
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 768px) {
   .footer__nav {
     display: flex;
-    justify-content: center;
+    gap: 25px;
   }
 }
-.footer__nav li {
-  margin-bottom: 0.1875rem;
-}
-@media screen and (min-width: 1300px) {
-  .footer__nav li {
-    margin: 0 2.5rem;
-    display: flex;
-  }
-}
-.footer__nav li:nth-child(1)::before {
+.footer__nav_1 :nth-child(1)::before {
   content: "\f2e7";
   font-family: "FontAwesome";
   margin-right: 0.625rem;
   font-size: clamp(1.3rem, 2vw, 1.7rem);
 }
-.footer__nav li:nth-child(2)::before {
+.footer__nav_1 :nth-child(2)::before {
   content: "\f4c4";
   font-family: "FontAwesome";
   margin-right: 0.625rem;
   font-size: clamp(1.3rem, 2vw, 1.7rem);
+}
+@media screen and (min-width: 768px) {
+  .footer__nav_1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    font-weight: 500;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__nav_2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    gap: 7px;
+  }
+}
+.footer__nav li {
+  margin-bottom: 0.1875rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__nav li {
+    display: flex;
+  }
 }
 .footer__nav li a {
   transition: color 0.4s ease-in-out;
