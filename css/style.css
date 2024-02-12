@@ -175,7 +175,7 @@ img {
 
 .main__location {
   height: 4.375rem;
-  background-color: #EAEAEA;
+  background-color: #eaeaea;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -189,7 +189,7 @@ img {
   flex-direction: column;
   padding: 3.125rem 1.25rem 3.75rem;
   text-align: center;
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -234,52 +234,60 @@ img {
 @media screen and (min-width: 768px) {
   .main__process h2 {
     align-self: center;
+    flex-direction: row;
   }
 }
-.main__process__step {
+.main__process_tableau {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .main__process_tableau {
+    display: flex;
+    flex-direction: row;
+    gap: 36px;
+  }
+}
+.main__process_tableau .main__process__step {
+  box-sizing: border-box;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   flex-direction: row-reverse;
   position: relative;
-  width: 100%;
-  max-width: 43.1875rem;
+  width: 322px;
+  height: 72px;
   margin-bottom: 1.5625rem;
   padding: 0.9375rem 0.9375rem 0.9375rem 0;
   border-radius: 1.25rem;
   cursor: pointer;
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   transition: all 0.4s ease-in-out;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.421);
 }
 @media screen and (min-width: 768px) {
-  .main__process__step {
+  .main__process_tableau .main__process__step {
+    padding: 15px;
     justify-content: center;
   }
 }
-.main__process__step div {
+.main__process_tableau .main__process__step div {
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  left: -0.75rem;
-  width: 1.5625rem;
-  height: 1.5625rem;
+  left: -12px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   font-size: clamp(1.1rem, 2vw, 1.5rem);
   color: white;
   background-color: #9356DC;
 }
-@media screen and (min-width: 768px) {
-  .main__process__step div {
-    width: 2.1875rem;
-    height: 2.1875rem;
-  }
+.main__process_tableau .main__process__step p {
+  font-size: 16px;
 }
-.main__process__step p {
-  font-size: clamp(1.1rem, 2vw, 1.6rem);
-}
-.main__process__step:nth-child(2)::after {
+.main__process_tableau .main__process__step#choisir::after {
   content: "\f3cf";
   font-family: "FontAwesome";
   margin-left: 1.875rem;
@@ -290,12 +298,12 @@ img {
   transition: all 0.4s ease-in-out;
 }
 @media screen and (min-width: 768px) {
-  .main__process__step:nth-child(2)::after {
+  .main__process_tableau .main__process__step#choisir::after {
     margin-left: 0;
     margin-right: 1.875rem;
   }
 }
-.main__process__step:nth-child(3)::after {
+.main__process_tableau .main__process__step#composer::after {
   content: "\f03a";
   font-family: "FontAwesome";
   margin-left: 1.875rem;
@@ -306,13 +314,14 @@ img {
   transition: all 0.4s ease-in-out;
 }
 @media screen and (min-width: 768px) {
-  .main__process__step:nth-child(3)::after {
+  .main__process_tableau .main__process__step#composer::after {
     margin-left: 0;
     margin-right: 1.875rem;
   }
 }
-.main__process__step:nth-child(4)::after {
+.main__process_tableau .main__process__step#deguster::after {
   content: "\f54e";
+  color: #9356DC;
   font-family: "FontAwesome";
   margin-left: 1.875rem;
   margin-right: 0.625rem;
@@ -320,27 +329,26 @@ img {
   font-size: clamp(1.3rem, 3vw, 1.8rem);
   color: rgba(0, 0, 0, 0.3882352941);
   transition: all 0.4s ease-in-out;
-  color: var(--primary, #9356DC);
 }
 @media screen and (min-width: 768px) {
-  .main__process__step:nth-child(4)::after {
+  .main__process_tableau .main__process__step#deguster::after {
     margin-left: 0;
     margin-right: 1.875rem;
   }
 }
-.main__process__step:focus div {
+.main__process_tableau .main__process__step:focus div {
   display: none;
 }
-.main__process__step:hover, .main__process__step:focus {
+.main__process_tableau .main__process__step:hover, .main__process_tableau .main__process__step:focus {
   background-color: #f2eafb;
 }
-.main__process__step:hover:hover::after, .main__process__step:hover:focus::after, .main__process__step:focus:hover::after, .main__process__step:focus:focus::after {
+.main__process_tableau .main__process__step:hover:hover::after, .main__process_tableau .main__process__step:hover:focus::after, .main__process_tableau .main__process__step:focus:hover::after, .main__process_tableau .main__process__step:focus:focus::after {
   color: #9356DC;
 }
 
 .main__restaurant {
   padding: 3.125rem 1.25rem 2.5rem;
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
 }
 .main__restaurant h2 {
   margin-bottom: 0.625rem;
@@ -374,6 +382,9 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.main__restaurant .card a figure::before {
+  z-index: 1;
 }
 .main__restaurant .card a p {
   font-weight: 300;
@@ -491,8 +502,8 @@ img {
 }
 
 .main__banner {
-  max-height: 55vh;
-  min-height: 30vh;
+  position: absolute;
+  height: 383px;
 }
 .main__location h3 {
   font-weight: 400;
@@ -501,14 +512,29 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   gap: 0 2.5rem;
   position: relative;
-  top: -50px;
 }
 @media screen and (min-width: 1300px) {
   .main__menu {
     flex-direction: row;
+  }
+}
+.main__menu .background_menu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  background-color: #f6f6f6;
+  border-radius: 1.875rem 1.875rem 0 0;
+  padding-bottom: 40px;
+  margin-top: 345px;
+}
+@media (min-width: 768px) {
+  .main__menu .background_menu {
+    width: 1055px;
   }
 }
 .main__menu__title {
@@ -517,11 +543,10 @@ img {
   justify-content: space-between;
   font-family: "Shrikhand", cursive;
   font-weight: 500;
-  padding: 1.25rem;
+  padding: 0px 1.25rem;
+  padding-top: 32px;
   width: 100%;
-  border-radius: 1.875rem 1.875rem 0 0;
   font-size: clamp(1.5rem, 2.5vw, 2.5rem);
-  background-color: white;
 }
 @media screen and (min-width: 1300px) {
   .main__menu__title {
@@ -566,12 +591,12 @@ img {
   opacity: 1;
 }
 .main__menu__starter, .main__menu__dish, .main__menu__dessert {
-  padding: 0.625rem 1.25rem 2.5rem;
+  padding: 0px 13px;
   width: 100%;
 }
-@media screen and (min-width: 1300px) {
+@media (min-width: 768px) {
   .main__menu__starter, .main__menu__dish, .main__menu__dessert {
-    width: 30%;
+    padding: 0px 210px;
     padding-bottom: 2.5rem;
   }
 }
@@ -609,9 +634,15 @@ img {
   box-shadow: 5px 5px 5px black;
   background: linear-gradient(to bottom, #ff93e1, #a16be0 80%);
 }
+.main__menu .button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 
 .meal {
   display: flex;
+  width: 100%;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.421);
   border-radius: 0.625rem;
   margin-top: 1.25rem;
