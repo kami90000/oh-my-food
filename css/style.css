@@ -269,6 +269,7 @@ img {
   .main__process_tableau .main__process__step {
     padding: 15px;
     justify-content: center;
+    width: 30%;
   }
 }
 .main__process_tableau .main__process__step div {
@@ -377,6 +378,11 @@ img {
   color: black;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.421);
 }
+@media (min-width: 768px) {
+  .main__restaurant .card a {
+    width: 45%;
+  }
+}
 .main__restaurant .card a figure {
   height: 70%;
   display: flex;
@@ -441,7 +447,6 @@ img {
   background-color: #333;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
 }
 @media (min-width: 768px) {
   .footer {
@@ -462,13 +467,20 @@ img {
   }
 }
 .footer__nav {
+  display: flex;
+  flex-direction: column;
   margin: 0.625rem 0;
 }
 @media screen and (min-width: 768px) {
   .footer__nav {
     display: flex;
+    flex-direction: row;
     gap: 25px;
   }
+}
+.footer__nav_1 {
+  display: flex;
+  flex-direction: column;
 }
 .footer__nav_1 :nth-child(1)::before {
   content: "\f2e7";
@@ -492,6 +504,10 @@ img {
     font-weight: 500;
   }
 }
+.footer__nav_2 {
+  display: flex;
+  flex-direction: column;
+}
 @media screen and (min-width: 768px) {
   .footer__nav_2 {
     display: flex;
@@ -502,18 +518,10 @@ img {
     gap: 7px;
   }
 }
-.footer__nav li {
-  margin-bottom: 0.1875rem;
-}
-@media screen and (min-width: 768px) {
-  .footer__nav li {
-    display: flex;
-  }
-}
-.footer__nav li a {
+.footer__nav a {
   transition: color 0.4s ease-in-out;
 }
-.footer__nav li a:hover, .footer__nav li a:focus {
+.footer__nav a:hover, .footer__nav a:focus {
   color: #a16be0;
 }
 

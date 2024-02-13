@@ -4,11 +4,10 @@
   background-color: #333;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   @media (min-width: 768px) {
-      flex-direction: row-reverse;
-      justify-content: flex-start;
-      gap: 25px;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    gap: 25px;
   }
   h2 {
     margin-bottom: rem-calc(20);
@@ -20,55 +19,55 @@
     }
   }
   &__nav {
+    display: flex;
+    flex-direction: column;  
     margin: rem-calc(10) 0;
     @media screen and (min-width: 768px) {
       display: flex;
+      flex-direction: row;
       gap: 25px;
     }
-    &_1{
-        :nth-child(1)::before {
-            content: "\f2e7";
-            font-family: "FontAwesome";
-            margin-right: rem-calc(10);
-            font-size: clamp(1.3rem, 2vw, 1.7rem);
-          }
-          :nth-child(2)::before {
-            content: "\f4c4";
-            font-family: "FontAwesome";
-            margin-right: rem-calc(10);
-            font-size: clamp(1.3rem, 2vw, 1.7rem);
-          }
-        @media screen and (min-width: 768px) {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            gap: 7px;
-            font-weight: 500;
-          }
-    }
-    &_2{
-        @media screen and (min-width: 768px) {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            font-weight: 400;
-            gap: 7px;
-          }
-    }
-    li {
-      margin-bottom: rem-calc(3);
+    &_1 {
+        display: flex;
+        flex-direction: column;      
+      :nth-child(1)::before {
+        content: "\f2e7";
+        font-family: "FontAwesome";
+        margin-right: rem-calc(10);
+        font-size: clamp(1.3rem, 2vw, 1.7rem);
+      }
+      :nth-child(2)::before {
+        content: "\f4c4";
+        font-family: "FontAwesome";
+        margin-right: rem-calc(10);
+        font-size: clamp(1.3rem, 2vw, 1.7rem);
+      }
       @media screen and (min-width: 768px) {
         display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 7px;
+        font-weight: 500;
       }
-     
-      a {
-        transition: color 0.4s ease-in-out;
-        &:hover,
-        &:focus {
-          color: $light-primary-color;
-        }
+    }
+    &_2 {
+        display: flex;
+        flex-direction: column;      
+      @media screen and (min-width: 768px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-weight: 400;
+        gap: 7px;
+      }
+    }
+    a {
+      transition: color 0.4s ease-in-out;
+      &:hover,
+      &:focus {
+        color: $light-primary-color;
       }
     }
   }
