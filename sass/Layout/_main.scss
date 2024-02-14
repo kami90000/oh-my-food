@@ -7,7 +7,12 @@
       content: "\f3c5";
       font-family: "FontAwesome";
       margin-right: rem-calc(15);
+      .localisation-form .input-form {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
     }
+  }
   }
   &__description {
     flex-direction: column;
@@ -40,6 +45,9 @@
       @media screen and (min-width: 768px) {
         align-self: center;
         flex-direction: row;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: left;
       }
     }
     &_tableau {
@@ -70,7 +78,8 @@
         @media screen and (min-width: 768px) {
           padding: 15px;
           justify-content: center;
-          width: 30%;
+          width: 450px;
+          height: 72px;
         }
         div {
           @include flex-center;
@@ -79,7 +88,7 @@
           width: 24px;
           height: 24px;
           border-radius: 50%;
-          font-size: clamp(1.1rem, 2vw, 1.5rem);
+          font-size: 14.182px;
           color: white;
           background-color: $color-primary;
         }
@@ -116,22 +125,32 @@
 }
 
 .main__restaurant {
-  padding: rem-calc(50) rem-calc(20) rem-calc(40);
+  padding: 9px;
   background-color: #f6f6f6;
   h2 {
     margin-bottom: rem-calc(10);
     @media screen and (min-width: 768px) {
-      text-align: center;
+      text-align: left;
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 18px;
+      padding-left: 684px;
     }
   }
   .card {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
-    gap: 0 rem-calc(50);
+    gap: 100px;
     margin: 0 auto;
-    width: 100%;
-    max-width: rem-calc(2000);
+    width: 52%;
+    flex-direction: row;
+    row-gap: 50px;
+    @media (max-width: 767px) {
+      width: 90%;
+      gap: 18px;
+    }
+    
     a {
       width: 100%;
       max-width: rem-calc(650);

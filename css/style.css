@@ -1,6 +1,7 @@
 *, ::before, ::after {
   margin: 0;
   padding: 0;
+  font-size: 25px;
   box-sizing: border-box;
 }
 
@@ -17,12 +18,12 @@ h1 {
 }
 
 h2 {
-  font-size: clamp(1.8rem, 2vw, 2.5rem);
+  font-size: 40px;
   font-weight: 500;
 }
 
 h3 {
-  font-size: clamp(1.4rem, 2vw, 1.8rem);
+  font-size: 16px;
   font-weight: 500;
 }
 
@@ -37,7 +38,7 @@ p {
 }
 
 a {
-  font-size: clamp(1.3rem, 2vw, 0.8rem);
+  font-size: 16px;
   text-decoration: none;
   color: inherit;
 }
@@ -185,6 +186,11 @@ img {
   font-family: "FontAwesome";
   margin-right: 0.9375rem;
 }
+.main__location p::before .localisation-form .input-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
 .main__description {
   flex-direction: column;
   padding: 3.125rem 1.25rem 3.75rem;
@@ -235,6 +241,9 @@ img {
   .main__process h2 {
     align-self: center;
     flex-direction: row;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
   }
 }
 .main__process_tableau {
@@ -269,7 +278,8 @@ img {
   .main__process_tableau .main__process__step {
     padding: 15px;
     justify-content: center;
-    width: 30%;
+    width: 450px;
+    height: 72px;
   }
 }
 .main__process_tableau .main__process__step div {
@@ -281,7 +291,7 @@ img {
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-size: 14.182px;
   color: white;
   background-color: #9356DC;
 }
@@ -348,7 +358,7 @@ img {
 }
 
 .main__restaurant {
-  padding: 3.125rem 1.25rem 2.5rem;
+  padding: 9px;
   background-color: #f6f6f6;
 }
 .main__restaurant h2 {
@@ -356,17 +366,28 @@ img {
 }
 @media screen and (min-width: 768px) {
   .main__restaurant h2 {
-    text-align: center;
+    text-align: left;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 18px;
+    padding-left: 684px;
   }
 }
 .main__restaurant .card {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   flex-wrap: wrap;
-  gap: 0 3.125rem;
+  gap: 100px;
   margin: 0 auto;
-  width: 100%;
-  max-width: 125rem;
+  width: 52%;
+  flex-direction: row;
+  row-gap: 50px;
+}
+@media (max-width: 767px) {
+  .main__restaurant .card {
+    width: 90%;
+    gap: 18px;
+  }
 }
 .main__restaurant .card a {
   width: 100%;
@@ -463,7 +484,8 @@ img {
 @media screen and (min-width: 768px) {
   .footer h2 {
     text-align: center;
-    margin: 0;
+    margin: 23px;
+    font-size: 18px;
   }
 }
 .footer__nav {
@@ -486,13 +508,13 @@ img {
   content: "\f2e7";
   font-family: "FontAwesome";
   margin-right: 0.625rem;
-  font-size: clamp(1.3rem, 2vw, 1.7rem);
+  font-size: 16px;
 }
 .footer__nav_1 :nth-child(2)::before {
   content: "\f4c4";
   font-family: "FontAwesome";
   margin-right: 0.625rem;
-  font-size: clamp(1.3rem, 2vw, 1.7rem);
+  font-size: 16px;
 }
 @media screen and (min-width: 768px) {
   .footer__nav_1 {
@@ -714,13 +736,14 @@ img {
 .meal__description h4 {
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: clamp(1.4rem, 2vw, 1.9rem);
+  font-size: 18px;
+  font-weight: bold;
 }
 .meal__description p {
   overflow: hidden;
   text-overflow: ellipsis;
   font-weight: 200;
-  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-size: 16px;
 }
 .meal__price {
   font-weight: 500;
