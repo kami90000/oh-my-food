@@ -10,8 +10,8 @@
             <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
             <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
             <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-            <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-            <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
             <link rel="manifest" href="assets/favicon/site.webmanifest">
             <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
             <meta name="msapplication-TileColor" content="#da532c">
@@ -32,21 +32,18 @@
       <h1>ohmyfood</h1>
     </header>
 
-    <main class="main">
+     <!-- Main -->
+
+     <main class="main">
       <div class="main__location">
-       <form class="search-container">
-          <div class="search-icon">
-            <i class="blue fa-solid fa-location-dot"></i>
-          </div>
-          <!-- Champ de recherche -->
-          <input type="text" class="text" placeholder="Paris, Belleville">
-        </form>
+          <p>Paris, Belleville</p>
       </div>
 
+
       <section class="main__description">
-        <h2 class="main__description__title">
+        <h1 class="main__description__title">
           Réservez le menu qui vous convient
-        </h2>
+        </h1>
         <p class="main__description__text">
           Découvrez des restaurants d'exception, séléctionnés par nos soins.
         </p>
@@ -76,7 +73,7 @@
       </section>
 
       <section class="main__restaurant">
-        <div class="main__restaurant">
+        <div class="main__restaurant-titre">
           <h2 id="restaurants">Restaurants</h2>
         </div>
         <div class="card">
@@ -89,9 +86,10 @@
               />
             </figure>
             <div class="card__info">
-              <h3>La palette du goût<span class="card__info__heart"></span></h3>
+              <h3>La palette du goût</h3>
               <p>Ménilmontant</p>
             </div>
+            <span class="card__info__heart"></span>
           </a>
           <a class="new" href="restaurants/laNoteEnchantée.html">
             <figure>
@@ -102,9 +100,10 @@
               />
             </figure>
             <div class="card__info">
-              <h3>La note enchantée<span class="card__info__heart"></span></h3>
+              <h3>La note enchantée</h3>
               <p>Charonne</p>
             </div>
+            <span class="card__info__heart"></span>
           </a>
           <a href="restaurants/aLaFrancaise.html">
             <figure>
@@ -115,9 +114,10 @@
               />
             </figure>
             <div class="card__info">
-              <h3>À la française<span class="card__info__heart"></span></h3>
+              <h3>À la française</h3>
               <p>Cité Rouge</p>
             </div>
+            <span class="card__info__heart"></span>
           </a>
           <a href="restaurants/leDeliceDesSens.html">
             <figure>
@@ -127,9 +127,10 @@
               />
             </figure>
             <div class="card__info">
-              <h3>Le délice des sens<span class="card__info__heart"></span></h3>
+              <h3>Le délice des sens</h3>
               <p>Folie-Méricourt</p>
             </div>
+            <span class="card__info__heart"></span>
           </a>
         </div>
       </section>

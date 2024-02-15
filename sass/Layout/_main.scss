@@ -8,11 +8,11 @@
       font-family: "FontAwesome";
       margin-right: rem-calc(15);
       .localisation-form .input-form {
-      display: flex;
-      justify-content: center;
-      flex-direction: row;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+      }
     }
-  }
   }
   &__description {
     flex-direction: column;
@@ -20,6 +20,14 @@
     text-align: center;
     background-color: #f6f6f6;
     @include flex-center;
+    h1{
+      font-family: "roboto";
+      font-weight: 700;
+      font-size: 40px;
+    }
+    p{
+      font-size: 18px;
+    }
     &__text {
       margin: rem-calc(15) 0 rem-calc(35);
       font-weight: 300;
@@ -39,25 +47,25 @@
     @include flex-center;
     flex-direction: column;
     padding: rem-calc(40) rem-calc(20);
-    h2 {
-      align-self: flex-start;
+    width: 100%;
+    .main__process_fonctionnement {
       margin-bottom: rem-calc(25);
-      @media screen and (min-width: 768px) {
-        align-self: center;
-        flex-direction: row;
+      width: 100%;
+      max-width: 1080px;
+      h2 {
         font-size: 24px;
         font-weight: bold;
-        text-align: left;
       }
     }
     &_tableau {
       display: flex;
       flex-direction: column;
+      width: 100%;
+      max-width: 1080px;
       @media screen and (min-width: 768px) {
         display: flex;
         flex-direction: row;
-        gap: 36px;
-        
+        justify-content: space-between;
       }
       .main__process__step {
         box-sizing: border-box;
@@ -66,10 +74,10 @@
         align-items: center;
         flex-direction: row-reverse;
         position: relative;
-        width: 322px;
+        width: 100%;
         height: 72px;
-        margin-bottom: rem-calc(25);
-        padding: rem-calc(15) rem-calc(15) rem-calc(15) 0;
+        margin-bottom:25px;
+        padding: 0 20px;
         border-radius: rem-calc(20);
         cursor: pointer;
         background-color: #f6f6f6;
@@ -78,7 +86,7 @@
         @media screen and (min-width: 768px) {
           padding: 15px;
           justify-content: center;
-          width: 450px;
+          width: 30%;
           height: 72px;
         }
         div {
@@ -97,16 +105,27 @@
         }
         &#choisir::after {
           content: "\f3cf";
+          color: #00000063;
           @include logo-process;
         }
         &#composer::after {
           content: "\f03a";
+          color: #00000063;
           @include logo-process;
         }
         &#deguster::after {
           content: "\f54e";
           color: $color-primary;
-          @include logo-process;
+          font-family: 'FontAwesome';
+          margin-left: rem-calc(30);
+          margin-right: rem-calc(10);
+          width: rem-calc(30);
+          font-size: clamp(1.3rem, 3vw, 1.8rem);
+          transition: all 0.4s ease-in-out;
+          @media screen and (min-width: 768px) {
+              margin-left: 0; 
+              margin-right: rem-calc(30);
+          }
         }
         &:focus div {
           display: none;
@@ -125,39 +144,41 @@
 }
 
 .main__restaurant {
-  padding: 9px;
+  padding: 9px 9px 66px 9px;
   background-color: #f6f6f6;
-  h2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .main__restaurant-titre {
     margin-bottom: rem-calc(10);
-    @media screen and (min-width: 768px) {
-      text-align: left;
+    width: 100%;
+    max-width: 1080px;
+    h2 {
       font-size: 24px;
       font-weight: bold;
       margin-top: 18px;
-      padding-left: 684px;
     }
   }
   .card {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 100px;
-    margin: 0 auto;
-    width: 52%;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1080px;
     row-gap: 50px;
     @media (max-width: 767px) {
       width: 90%;
       gap: 18px;
     }
-    
+
     a {
+      position: relative;
       width: 100%;
       max-width: rem-calc(650);
-      height: rem-calc(300);
+      height: 251px;
       border-radius: rem-calc(20);
       overflow: hidden;
-      margin: rem-calc(20) 0;
       color: black;
       @include base-shadow;
       @media (min-width: 768px) {
@@ -167,7 +188,7 @@
         height: 70%;
         @include flex-center;
       }
-      figure::before{
+      figure::before {
         z-index: 1;
       }
       p {
@@ -180,14 +201,19 @@
       flex-direction: column;
       justify-content: center;
       height: 30%;
-      padding: rem-calc(10) rem-calc(15); 
+      padding: rem-calc(10) rem-calc(15);
       h3 {
+        font-weight: 700;
+        font-size: 18px;
         display: flex;
         align-items: center;
         justify-content: space-between;
       }
       &__heart {
         @include flex-center;
+        position: absolute;
+        right: 25px;
+        bottom: 33px;
         width: rem-calc(30);
         height: rem-calc(30);
         &::before {
