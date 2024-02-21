@@ -1,7 +1,8 @@
+@charset "UTF-8";
 *, ::before, ::after {
   margin: 0;
   padding: 0;
-  font-size: 25px;
+  font-size: 23px;
   box-sizing: border-box;
 }
 
@@ -9,6 +10,11 @@ html {
   font-size: 16px;
   font-family: "Roboto", sans-serif;
   scroll-behavior: smooth;
+}
+
+body {
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 h1 {
@@ -28,13 +34,13 @@ h3 {
 }
 
 h4 {
-  font-size: clamp(1.5rem, 2vw, 2rem);
+  font-size: 18px;
   font-weight: 500;
 }
 
 p {
   font-weight: 500;
-  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  font-size: 16px;
 }
 
 a {
@@ -201,7 +207,23 @@ img {
 .main__description h1 {
   font-family: "roboto";
   font-weight: 700;
-  font-size: 40px;
+  font-size: 24px;
+}
+@media (min-width: 767px) {
+  .main__description h1 {
+    /* Taille de police pour les écrans mobiles */
+    font-size: 40px;
+  }
+}
+.main__description h2 {
+  font-family: "roboto";
+  font-weight: 700;
+  font-size: 24px;
+}
+@media (min-width: 768px) {
+  .main__description h2 {
+    font-size: 40px;
+  }
 }
 .main__description p {
   font-size: 18px;
@@ -240,10 +262,14 @@ img {
   padding: 2.5rem 1.25rem;
   width: 100%;
 }
+@media (min-width: 1025px) {
+  .main__process {
+    padding: 2.5rem 10% 2.5rem 10%;
+  }
+}
 .main__process .main__process_fonctionnement {
   margin-bottom: 1.5625rem;
   width: 100%;
-  max-width: 1080px;
 }
 .main__process .main__process_fonctionnement h2 {
   font-size: 24px;
@@ -253,7 +279,6 @@ img {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 1080px;
 }
 @media screen and (min-width: 768px) {
   .main__process_tableau {
@@ -367,11 +392,18 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 28px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+@media (min-width: 1025px) {
+  .main__restaurant {
+    padding: 2.5rem 10% 2.5rem 10%;
+  }
 }
 .main__restaurant .main__restaurant-titre {
   margin-bottom: 0.625rem;
   width: 100%;
-  max-width: 1080px;
 }
 .main__restaurant .main__restaurant-titre h2 {
   font-size: 24px;
@@ -384,14 +416,22 @@ img {
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
-  max-width: 1080px;
-  row-gap: 50px;
+  gap: 18px;
 }
-@media (max-width: 767px) {
-  .main__restaurant .card {
-    width: 90%;
-    gap: 18px;
-  }
+.main__restaurant .card .new::before {
+  content: "Nouveau";
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 1.25rem;
+  right: 1.25rem;
+  border-radius: 0.3125rem;
+  padding: 0.625rem 0.9375rem;
+  font-weight: 500;
+  color: #278870;
+  background-color: #99E2D0;
+  font-size: 14px;
 }
 .main__restaurant .card a {
   position: relative;
@@ -493,8 +533,9 @@ img {
 @media screen and (min-width: 768px) {
   .footer h2 {
     text-align: center;
-    margin: 23px;
+    margin: 6px;
     font-size: 18px;
+    margin-top: 3px;
   }
 }
 .footer__nav {
@@ -566,7 +607,7 @@ img {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 5%;
+  left: 1%;
   padding: 5px;
 }
 .header__return i {
@@ -576,6 +617,11 @@ img {
 .main__banner {
   position: absolute;
   height: 383px;
+}
+@media screen and (min-width: 1025px) {
+  .main__banner {
+    position: static;
+  }
 }
 .main__location h3 {
   font-weight: 400;
@@ -589,9 +635,19 @@ img {
   gap: 0 2.5rem;
   position: relative;
 }
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 768px) {
   .main__menu {
     flex-direction: row;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .main__menu {
+    display: flex;
+    margin: 0 auto;
+    padding-left: 150px;
+    padding-right: 150px;
+    margin-top: -403px;
+    justify-content: center;
   }
 }
 .main__menu .background_menu {
@@ -620,7 +676,7 @@ img {
   width: 100%;
   font-size: clamp(1.5rem, 2.5vw, 2.5rem);
 }
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 768px) {
   .main__menu__title {
     justify-content: center;
   }
@@ -632,7 +688,7 @@ img {
   width: 1.875rem;
   height: 1.875rem;
 }
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 768px) {
   .main__menu .heart {
     margin-left: 1.25rem;
   }
@@ -669,13 +725,12 @@ img {
 @media (min-width: 768px) {
   .main__menu__starter, .main__menu__dish, .main__menu__dessert {
     padding: 0px 210px;
-    padding-bottom: 2.5rem;
+    padding-bottom: 8px;
   }
 }
 .main__menu__starter h3, .main__menu__dish h3, .main__menu__dessert h3 {
   position: relative;
   margin-bottom: 1.875rem;
-  padding-left: 0.625rem;
   font-weight: 300;
   text-transform: uppercase;
 }
@@ -721,11 +776,7 @@ img {
   cursor: pointer;
   overflow: hidden;
   animation: appear 1s both;
-}
-@media screen and (min-width: 1300px) {
-  .meal {
-    margin-top: 2.5rem;
-  }
+  background: white;
 }
 .meal:nth-child(2) {
   animation-delay: 200ms;
@@ -749,7 +800,9 @@ img {
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 500;
+  font-family: "roboto";
+  margin-bottom: 7px;
 }
 .meal__description p {
   overflow: hidden;
@@ -786,7 +839,7 @@ img {
   background-color: #fff;
   transition: transform 0.4s ease-in-out;
 }
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 768px) {
   .meal__check::after {
     padding: 0.625rem;
   }
