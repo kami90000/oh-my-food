@@ -100,6 +100,16 @@ img {
     opacity: 1;
   }
 }
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 .new {
   position: relative;
 }
@@ -116,6 +126,7 @@ img {
   font-weight: 500;
   color: #278870;
   background-color: #99E2D0;
+  font-size: 14px;
 }
 
 .loader {
@@ -418,20 +429,10 @@ img {
   width: 100%;
   gap: 18px;
 }
-.main__restaurant .card .new::before {
-  content: "Nouveau";
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: 1.25rem;
-  right: 1.25rem;
-  border-radius: 0.3125rem;
-  padding: 0.625rem 0.9375rem;
-  font-weight: 500;
-  color: #278870;
-  background-color: #99E2D0;
-  font-size: 14px;
+@media (min-width: 1025px) {
+  .main__restaurant .card {
+    row-gap: 50px;
+  }
 }
 .main__restaurant .card a {
   position: relative;
@@ -616,11 +617,12 @@ img {
 
 .main__banner {
   position: absolute;
-  height: 383px;
+  height: 275px;
 }
 @media screen and (min-width: 1025px) {
   .main__banner {
     position: static;
+    height: 437px;
   }
 }
 .main__location h3 {
@@ -658,11 +660,12 @@ img {
   background-color: #f6f6f6;
   border-radius: 1.875rem 1.875rem 0 0;
   padding-bottom: 40px;
-  margin-top: 345px;
+  margin-top: 215px;
 }
 @media (min-width: 768px) {
   .main__menu .background_menu {
     width: 1055px;
+    margin-top: 357px;
   }
 }
 .main__menu__title {
@@ -718,23 +721,74 @@ img {
   font-weight: 900;
   opacity: 1;
 }
-.main__menu__starter, .main__menu__dish, .main__menu__dessert {
+.main__menu__starter {
+  animation: slide-in-right 0.4s ease-in-out 0.4s both;
   padding: 0px 13px;
   width: 100%;
 }
-@media (min-width: 768px) {
-  .main__menu__starter, .main__menu__dish, .main__menu__dessert {
-    padding: 0px 210px;
-    padding-bottom: 8px;
-  }
-}
-.main__menu__starter h3, .main__menu__dish h3, .main__menu__dessert h3 {
+.main__menu__starter h3 {
   position: relative;
   margin-bottom: 1.875rem;
   font-weight: 300;
   text-transform: uppercase;
 }
-.main__menu__starter h3::before, .main__menu__dish h3::before, .main__menu__dessert h3::before {
+.main__menu__starter h3::before {
+  content: "";
+  position: absolute;
+  bottom: -0.625rem;
+  width: 3.125rem;
+  height: 0.25rem;
+  background-color: #99E2D0;
+}
+@media (min-width: 768px) {
+  .main__menu__starter {
+    padding: 0px 210px;
+    padding-bottom: 8px;
+  }
+}
+.main__menu__dish {
+  animation: slide-in-right 0.8s ease-in-out 0.4s both;
+  padding: 0px 13px;
+  width: 100%;
+}
+.main__menu__dish h3 {
+  position: relative;
+  margin-bottom: 1.875rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.main__menu__dish h3::before {
+  content: "";
+  position: absolute;
+  bottom: -0.625rem;
+  width: 3.125rem;
+  height: 0.25rem;
+  background-color: #99E2D0;
+}
+@media (min-width: 768px) {
+  .main__menu__dish {
+    padding: 0px 210px;
+    padding-bottom: 8px;
+  }
+}
+.main__menu__dessert {
+  animation: slide-in-right 1s ease-in-out 0.4s both;
+  padding: 0px 13px;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .main__menu__dessert {
+    padding: 0px 210px;
+    padding-bottom: 8px;
+  }
+}
+.main__menu__dessert h3 {
+  position: relative;
+  margin-bottom: 1.875rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.main__menu__dessert h3::before {
   content: "";
   position: absolute;
   bottom: -0.625rem;
@@ -775,20 +829,7 @@ img {
   margin-top: 1.25rem;
   cursor: pointer;
   overflow: hidden;
-  animation: appear 1s both;
   background: white;
-}
-.meal:nth-child(2) {
-  animation-delay: 200ms;
-}
-.meal:nth-child(3) {
-  animation-delay: 300ms;
-}
-.meal:nth-child(4) {
-  animation-delay: 400ms;
-}
-.meal:nth-child(5) {
-  animation-delay: 500ms;
 }
 .meal__description {
   white-space: nowrap;

@@ -190,23 +190,11 @@
     justify-content: space-between;
     width: 100%;
     gap: 18px;
-    
-    .new::before {
-      content: "Nouveau";
-      position: absolute;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      top: 1.25rem;
-      right: 1.25rem;
-      border-radius: 0.3125rem;
-      padding: 0.625rem 0.9375rem;
-      font-weight: 500;
-      color: #278870;
-      background-color: #99E2D0;
-      font-size: 14px;
+    @media  (min-width: 1025px) {
+     row-gap: 50px;
     }
-
+    
+  
     a {
       position: relative;
       width: 100%;

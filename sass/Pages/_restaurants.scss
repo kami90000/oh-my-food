@@ -17,9 +17,10 @@
 .main {
   &__banner {
     position: absolute;
-    height: 383px;
+    height: 275px;
     @media screen and (min-width: 1025px) {
       position: static;
+      height: 437px;
     }
 
   }
@@ -54,9 +55,10 @@
       background-color: #f6f6f6;
       border-radius: rem-calc(30) rem-calc(30) 0 0;
       padding-bottom: 40px;
-      margin-top: 345px;
+      margin-top: 215px;
       @media (min-width: 768px) {
         width: 1055px;
+        margin-top: 357px;
       }
     }
     &__title {
@@ -95,13 +97,62 @@
         opacity: 1;
       }
     }
-    &__starter,
-    &__dish,
+    
+    &__starter{
+      animation: slide-in-right 0.4s ease-in-out 0.4s both;
+      padding: 0px 13px;
+      width: 100%;
+      h3 {
+        position: relative;
+        margin-bottom: rem-calc(30);
+        font-weight: 300;
+        text-transform: uppercase;
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: rem-calc(-10);
+          width: rem-calc(50);
+          height: rem-calc(4);
+          background-color: $color-tertiary;
+          
+        }
+      }
+      @media (min-width: 768px) {
+        padding: 0px 210px;
+        padding-bottom: 8px;
+      }
+    }
+    &__dish{
+      animation: slide-in-right 0.8s ease-in-out 0.4s both;
+      padding: 0px 13px;
+      width: 100%;
+      h3 {
+        position: relative;
+        margin-bottom: rem-calc(30);
+        font-weight: 300;
+        text-transform: uppercase;
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: rem-calc(-10);
+          width: rem-calc(50);
+          height: rem-calc(4);
+          background-color: $color-tertiary;
+          
+        }
+      }
+
+      @media (min-width: 768px) {
+        padding: 0px 210px;
+        padding-bottom: 8px;
+      }
+    }
     &__dessert {
+      animation: slide-in-right 1s ease-in-out 0.4s both;
         padding: 0px 13px;
         width: 100%;
         @media (min-width: 768px) {
-          padding: 0px 210px;
+        padding: 0px 210px;
         padding-bottom: 8px;
       }
       h3 {
@@ -145,15 +196,9 @@
   margin-top: rem-calc(20);
   cursor: pointer;
   overflow: hidden;
-  animation: appear 1s both;
   background: white;
   
-
-  @for $i from 2 through 5 {
-    &:nth-child(#{$i}) {
-      animation-delay: 100ms * $i;
-    }
-  }
+   
   &__description {
     white-space: nowrap;
     overflow: hidden;
