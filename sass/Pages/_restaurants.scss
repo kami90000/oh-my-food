@@ -2,6 +2,7 @@
 
 .header {
   position: relative;
+    // Flèche de retour
   &__return {
     position: absolute;
     top: 50%;
@@ -13,20 +14,21 @@
     }
   }
 }
-
+// Contenu principal
 .main {
+   // Bannière
   &__banner {
-    position: absolute;
     height: 275px;
     @media screen and (min-width: 1025px) {
-      position: static;
       height: 437px;
     }
 
   }
+   // Emplacement
   &__location h3 {
     font-weight: 400;
   }
+   // Menu
   &__menu {
     display: flex;
     flex-direction: column;
@@ -43,24 +45,25 @@
       margin: 0 auto;
       padding-left: 150px;
       padding-right: 150px;
-      margin-top: -403px;
       justify-content: center;
     }
-
+   // Fond du menu
     .background_menu {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
       background-color: #f6f6f6;
       border-radius: rem-calc(30) rem-calc(30) 0 0;
+      margin-top: -50px;
+      padding: 13px;
       padding-bottom: 40px;
-      margin-top: 215px;
-      @media (min-width: 768px) {
-        width: 1055px;
-        margin-top: 357px;
-      }
+      @media screen and (min-width: 1024px) {
+        padding-left: 18%;
+        padding-right: 18%;
+        }
     }
+ // Titre du menu
     &__title {
       display: flex;
       align-items: center;
@@ -75,6 +78,7 @@
         justify-content: center;
       }
     }
+    // Icône de cœur
     .heart {
       @include flex-center;
       width: rem-calc(30);
@@ -97,10 +101,9 @@
         opacity: 1;
       }
     }
-    
+        // Catégorie "Starter"
     &__starter{
       animation: slide-in-right 0.4s ease-in-out 0.4s both;
-      padding: 0px 13px;
       width: 100%;
       h3 {
         position: relative;
@@ -117,14 +120,10 @@
           
         }
       }
-      @media (min-width: 768px) {
-        padding: 0px 210px;
-        padding-bottom: 8px;
-      }
     }
+      // Catégorie "Dish"
     &__dish{
       animation: slide-in-right 0.8s ease-in-out 0.4s both;
-      padding: 0px 13px;
       width: 100%;
       h3 {
         position: relative;
@@ -141,20 +140,12 @@
           
         }
       }
-
-      @media (min-width: 768px) {
-        padding: 0px 210px;
-        padding-bottom: 8px;
-      }
     }
+     // Catégorie "Dessert"
     &__dessert {
       animation: slide-in-right 1s ease-in-out 0.4s both;
-        padding: 0px 13px;
         width: 100%;
-        @media (min-width: 768px) {
-        padding: 0px 210px;
-        padding-bottom: 8px;
-      }
+    
       h3 {
         position: relative;
         margin-bottom: rem-calc(30);
@@ -171,6 +162,7 @@
         }
       }
     }
+     // Bouton du menu
     &__btn {
       @include button-style;
       @include base-shadow;
@@ -180,6 +172,7 @@
         @include button-hover;
       }
     }
+        // Conteneur de bouton
     .button {
       width: 100%;
       display: flex;
@@ -187,7 +180,7 @@
     }
   }
 }
-
+// Repas
 .meal {
   display: flex;
   width: 100%;
@@ -198,7 +191,7 @@
   overflow: hidden;
   background: white;
   
-   
+     // Description du repas
   &__description {
     white-space: nowrap;
     overflow: hidden;
@@ -219,6 +212,7 @@
       font-size: 16px;
     }
   }
+   // Prix du repas
   &__price {
     font-weight: 500;
     font-size: clamp(1.2rem, 2vw, 1.5rem);
@@ -228,6 +222,7 @@
     align-items: flex-end;
     padding: rem-calc(10) rem-calc(25) rem-calc(10) rem-calc(5);
   }
+   // Coche du repas
   &__check {
     @include flex-center;
     margin-right: -65px;

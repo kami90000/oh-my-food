@@ -1,12 +1,14 @@
 // Center
 
 @mixin flex-center{
+      // Centrer les éléments horizontalement et verticalement
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 @mixin button-style{
+    // Styles de base pour les boutons
     padding: rem-calc(20);
     border: none;
     border-radius: rem-calc(30);
@@ -20,17 +22,21 @@
 }
 
 @mixin button-hover{
+     // Styles au survol des boutons
     box-shadow: 5px 5px 5px black;
     background: $light-gradient;
 }
+// Shadows
 
 @mixin base-shadow{
+     // Ajouter une ombre de base
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.421);
 }
 
 // logo process
 
 @mixin logo-process{
+      // Styles pour le logo du processus
     font-family: 'FontAwesome';
     margin-left: rem-calc(30);
     margin-right: rem-calc(10);
@@ -46,6 +52,7 @@
 // Heart
 
 @mixin heart{
+    // Styles de base pour le cœur
     content: '\f004';
     font-family: "Font Awesome 5 Free";
     position: absolute;
@@ -53,6 +60,7 @@
 }
 
 @mixin heart-solid{
+        // Styles pour le cœur solide
     background: $gradient;
     background-clip: text;
     -webkit-background-clip: text;

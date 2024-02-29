@@ -1,76 +1,117 @@
 .footer {
+   // Espacement intérieur
   padding: rem-calc(30) rem-calc(20);
+    // Couleur du texte
   color: white;
+    // Couleur de fond
   background-color: #333;
+    // Affichage en colonne sur les petits écrans
   display: flex;
   flex-direction: column;
+  // Media Query pour une largeur d'écran minimale de 768px
   @media (min-width: 768px) {
+    // Affichage en ligne avec un espacement entre les éléments
     flex-direction: row-reverse;
     justify-content: flex-start;
     gap: 25px;
   }
+  // Style du titre
   h2 {
+        // Marge en bas
     margin-bottom: rem-calc(20);
+
+    //Police de caractères pour le titre
     font-family: $title-font;
+
+    // Poids de la police
     font-weight: 400;
+    
+    // Media Query pour une largeur d'écran minimale de 768px
     @media screen and (min-width: 768px) {
       text-align: center;
+
+      // Ajustement de la marge et de la taille de la police
       margin: 6px;
       font-size: 18px;
       margin-top: 3px;
      
     }
   }
+   // Style de la navigation
   &__nav {
+    // Affichage en colonne sur les petits écrans
     display: flex;
     flex-direction: column;  
     margin: rem-calc(10) 0;
     gap: 7px;
+
+    // Media Query pour une largeur d'écran minimale de 768px
     @media screen and (min-width: 768px) {
+       // Affichage en ligne avec un espacement entre les éléments
       display: flex;
       flex-direction: row;
       gap: 25px;
     }
+     // Style pour la première section de navigation
     &_1 {
+      // Affichage en colonne
         display: flex;
         flex-direction: column;  
-        gap: 7px;    
+        gap: 7px;   
+
+            // Style pour la première ancre
       :nth-child(1)::before {
         content: "\f2e7";
         font-family: "FontAwesome";
         margin-right: rem-calc(10);
         font-size: 16px;
       }
+          // Style pour la deuxième ancre
       :nth-child(2)::before {
         content: "\f4c4";
         font-family: "FontAwesome";
         margin-right: rem-calc(10);
         font-size: 16px;
       }
+       // Media Query pour une largeur d'écran minimale de 768px
       @media screen and (min-width: 768px) {
+        // Alignement en ligne avec centrage des éléments
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
         gap: 7px;
+
+        // Poids de la police
         font-weight: 500;
       }
     }
+     // Style pour la deuxième section de navigation
     &_2 {
+       // Affichage en colonne
         display: flex;
         flex-direction: column;     
         gap: 7px;
+
+         // Media Query pour une largeur d'écran minimale de 768px
       @media screen and (min-width: 768px) {
+        // Alignement en ligne avec centrage des éléments
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
+
+         // Poids de la police
         font-weight: 400;
+        // Espacement entre les éléments
         gap: 7px;
       }
     }
+        // Style pour les liens
     a {
+       // Transition de couleur
       transition: color 0.4s ease-in-out;
+           // Effet de survol ou de mise au point
       &:hover,
       &:focus {
         color: $light-primary-color;

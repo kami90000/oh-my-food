@@ -1,15 +1,26 @@
+  // Hauteur du header
 .header{
     height : rem-calc(60);
     width: 100%;
+      // Ombre de la boîte
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.591);
+      // Centre le contenu horizontalement et verticalement
     @include flex-center;
+
+     // Media Query pour une largeur d'écran minimale de 768px
     @media screen and (min-width: 768px){
         height: rem-calc(80);
     }
+      // Styles de l'image à l'intérieur du header
         img{
+             // Largeur de l'image
             width: rem-calc(170);
+              // Hauteur automatique pour maintenir les proportions
             height: auto;
+
+              // Media Query pour une largeur d'écran minimale de 768px
             @media screen and (min-width: 768px){
+                 // Largeur automatique pour s'ajuster à la mise en page
                 width: auto;
                 width: rem-calc(250);
             }

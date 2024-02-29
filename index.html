@@ -1,18 +1,21 @@
 <!DOCTYPE html>
     <html lang="fr">
         <head>
+              <!-- Métadonnées de la page -->
             <meta charset="UTF-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="description" content="Composez votre propre menu et réduisez votre temps d'attente au restaurant !">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Ohmyfood</title>
+              <!-- Liens vers les styles et les polices -->
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
             <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
             <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+            
+            <!-- Icônes pour les onglets et la barre de navigation -->
             <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
             <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
             <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
-           
             <link rel="mask-icon" href=".assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
             <meta name="msapplication-TileColor" content="#da532c">
             <meta name="theme-color" content="#ffffff">
@@ -20,44 +23,49 @@
         </head>
         <body>
           
-   <!-- Loader -->
+   <!-- Loader - Section de chargement -->
     <div class="loader">
       <div class="loader__ring"></div>
       <p class="loader__txt">Chargement...</p>
     </div>
 
-    <!-- Header -->
+    <!-- Header - En-tête de la page -->
 
     <header class="header">
       <h1>ohmyfood</h1>
     </header>
 
-     <!-- Main -->
+   <!-- Main - Contenu principal de la page -->
 
      <main class="main">
       <div class="main__location">
           <p>Paris, Belleville</p>
       </div>
 
-<!-- Section de description -->
+<!-- Section de description - Présentation du service -->
 
       <section class="main__description">
+         <!-- Titre de la section -->
         <h2 class="main__description__title">
           Réservez le menu qui vous convient
         </h2>
         <p class="main__description__text">
+            <!-- Texte descriptif -->
           Découvrez des restaurants d'exception, séléctionnés par nos soins.
         </p>
+          <!-- Bouton pour explorer les restaurants -->
         <a class="main__description__btn" href="#restaurants"
           >Explorer nos restaurants</a>
       </section>
 
- <!-- Section du processus -->
+     <!-- Section du processus - Description des étapes -->
 
       <section class="main__process">
+          <!-- Fonctionnement global -->
         <div class="main__process_fonctionnement">
           <h2>Fonctionnement</h2>
         </div>
+         <!-- Tableau des étapes du processus -->
         <div class="main__process_tableau">
 
                 <!-- Étapes du processus -->
@@ -77,26 +85,30 @@
         </div>
       </section>
 
-      <!-- Section des restaurants -->
+        <!-- Section des restaurants - Présentation des restaurants disponibles -->
 
       <section class="main__restaurant">
         <div class="main__restaurant-titre">
           <h2 id="restaurants">Restaurants</h2>
         </div>
+        <!-- Cartes des restaurants avec des liens vers les pages détaillées -->
         <div class="card">
               <!-- Cartes des restaurants -->
 
           <a class="new" href="restaurants/laPaletteDuGout.html">
+              <!-- Image représentative du restaurant -->
             <figure>
               <img
                 class="newImage"
                 src="assets/images/restaurants/medium/jay-wennington-N_Y88TWmGwA-unsplash__medium.jpg"
                 alt="Plat sur plaque en céramique blanche">
             </figure>
+            <!-- Informations sur le restaurant -->
             <div class="card__info">
               <h3>La palette du goût</h3>
               <p>Ménilmontant</p>
             </div>
+             <!-- Icône de favori -->
             <span class="card__info__heart"></span>
           </a>
           <a class="new" href="restaurants/laNoteEnchantée.html">
@@ -144,6 +156,7 @@
     <!-- Footer -->
 
     <footer class="footer">
+       <!-- Titre ou logo du pied de page -->
       <h2>ohmyfood</h2>
 
         <!-- Navigation du pied de page -->

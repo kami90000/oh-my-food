@@ -1,4 +1,5 @@
 .main {
+  // Section "Location"
   &__location {
     height: rem-calc(70);
     background-color: #eaeaea;
@@ -14,6 +15,7 @@
       }
     }
   }
+  // Section "Description"
   &__description {
     flex-direction: column;
     padding: rem-calc(50) rem-calc(20) rem-calc(60);
@@ -42,10 +44,14 @@
     p{
       font-size: 18px;
     }
+
+    // Sous-section "text"
     &__text {
       margin: rem-calc(15) 0 rem-calc(35);
       font-weight: 300;
     }
+
+    // Bouton stylisé
     &__btn {
       @include base-shadow;
       @include button-style;
@@ -57,6 +63,7 @@
       }
     }
   }
+    // Section "Process"
   &__process {
     @include flex-center;
     flex-direction: column;
@@ -65,6 +72,7 @@
     @media  (min-width: 1025px) {
       padding:2.5rem 10% 2.5rem 10%;
     }
+    // Sous-section "process_fonctionnement"
     .main__process_fonctionnement {
       margin-bottom: rem-calc(25);
       width: 100%;
@@ -74,6 +82,8 @@
         font-weight: bold;
       }
     }
+     // Sous-section "tableau"
+
     &_tableau {
       display: flex;
       flex-direction: column;
@@ -84,6 +94,8 @@
         flex-direction: row;
         justify-content: space-between;
       }
+        // Sous-section "process_step"
+
       .main__process__step {
         box-sizing: border-box;
         display: flex;
@@ -120,16 +132,19 @@
         p {
           font-size: 16px;
         }
+         // Icône "choisir"
         &#choisir::after {
           content: "\f3cf";
           color: #00000063;
           @include logo-process;
         }
+          // Icône "composer"
         &#composer::after {
           content: "\f03a";
           color: #00000063;
           @include logo-process;
         }
+          // Icône "deguster"
         &#deguster::after {
           content: "\f54e";
           color: $color-primary;
@@ -160,6 +175,7 @@
   }
 }
 
+ // Styles généraux pour la section "Restaurant"
 .main__restaurant {
   padding: 9px 9px 66px 9px;
   background-color: #f6f6f6;
@@ -169,32 +185,38 @@
   gap: 28px;
   padding-left: 20px;
   padding-right: 20px;
+    // Media query pour les écrans larges
   @media  (min-width: 1025px) {
     padding:2.5rem 10% 2.5rem 10%;
   }
 
+ // Sous-section "restaurant-titre"
   .main__restaurant-titre {
     margin-bottom: rem-calc(10);
     width: 100%;
     
+     // Styles pour le titre
     h2 {
       font-size: 24px;
       font-weight: bold;
       margin-top: 18px;
     }
+
+      // Sous-section "card"
   }
   .card {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
     gap: 18px;
+      // Media query pour les écrans larges
     @media  (min-width: 1025px) {
      row-gap: 50px;
     }
     
-  
+    // Élément "a" (lien)
     a {
       position: relative;
       width: 100%;
@@ -204,10 +226,12 @@
       overflow: hidden;
       color: black;
       @include base-shadow;
+       // Media query pour les écrans moyens
       @media (min-width: 768px) {
         width: 45%;
       }
-      
+
+      // Sous-section "figure"
       figure {
         height: 70%;
         @include flex-center;
@@ -215,9 +239,13 @@
       figure::before {
         z-index: 1;
       }
+
+       // Paragraphe stylisé
       p {
         font-weight: 300;
       }
+
+       // Sous-section "info"
     }
     &__info {
       position: relative;
@@ -226,6 +254,7 @@
       justify-content: center;
       height: 30%;
       padding: rem-calc(10) rem-calc(15);
+       // Titre stylisé
       h3 {
         font-weight: 700;
         font-size: 18px;
@@ -233,6 +262,8 @@
         align-items: center;
         justify-content: space-between;
       }
+
+         // Élément "heart"
       &__heart {
         @include flex-center;
         position: absolute;
@@ -247,6 +278,8 @@
           @include heart;
           @include heart-solid;
         }
+        
+         // Effet au survol pour le cœur
         &:hover::before {
           color: transparent;
         }

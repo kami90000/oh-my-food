@@ -1,20 +1,24 @@
+// Définition des styles globaux pour le document HTML
 html{
     font-size: $base-font-size;
     font-family: $text-font;
     scroll-behavior: smooth;
 
 }
+// Définition des styles pour le corps du document
 body{
 max-width: 1440px;
 margin: 0 auto;
 }
 
+// Styles pour les titres de niveau 1
 h1{
     font-family: $title-font;
     font-weight: 500;
     font-size: clamp(2rem, 2vw, 3rem);
 }
 
+// Styles communs pour les sous-titres (niveaux 2, 3, 4)
 h2{
     font-size: 18px;
     font-weight: 500;
@@ -30,10 +34,13 @@ h4{
     font-weight: 500;
 }
 
+// Styles communs pour les paragraphes et les liens
 p{
     font-weight: 500;
     font-size: 16px;
 }
+
+// Styles spécifiques pour les liens
 
 a{
     font-size: 16px;
@@ -41,10 +48,12 @@ a{
     color: inherit;
 }
 
+// Styles pour les listes
 li{
     list-style-type: none;
 }
 
+// Styles pour les images
 img{
     object-fit: cover;
     object-position: center;
