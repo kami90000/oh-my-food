@@ -208,7 +208,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
     gap: 18px;
       // Media query pour les écrans larges
@@ -278,7 +278,7 @@
           @include heart;
           @include heart-solid;
         }
-        
+
          // Effet au survol pour le cœur
         &:hover::before {
           color: transparent;
