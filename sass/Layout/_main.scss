@@ -216,11 +216,10 @@
      row-gap: 50px;
     }
     
-    // Élément "a" (lien)
-    a {
+    // Élément "article" 
+      article {
       position: relative;
       width: 100%;
-      max-width: rem-calc(650);
       height: 251px;
       border-radius: rem-calc(20);
       overflow: hidden;
@@ -231,6 +230,20 @@
         width: 45%;
       }
 
+    // Élément "a" (lien)
+      a {
+        position: relative;
+        width: 100%;
+        height: 251px;
+        border-radius: rem-calc(20);
+        overflow: hidden;
+        color: black;
+        @include base-shadow;
+         // Media query pour les écrans moyens
+        @media (min-width: 768px) {
+          width: 45%;
+        }
+      }
       // Sous-section "figure"
       figure {
         height: 70%;
